@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Hamburger menu */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+.hamburger-top,.hamburger-middle, .hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #000;
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+    display: none;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+  
+#numberedList {
+    background-image: url("./images/bg-1.png");
+    background-size: contain;
+}
+
+#arrow {
+    margin-top: -190px;
+    margin-left: -120px;
+}
+@media  screen and (max-width: 618px) {
+    #arrow {
+        margin-top: -120px;
+        margin-left: -100px;
+    }
+ }
+@media  screen and (max-width: 480px) {
+   #arrow {
+       margin-top: -120px;
+       margin-left: -100px;
+   }
+}
+
+@media  screen and (max-width: 768px) {
+    #arrow {
+        margin-top: -180px;
+        margin-left: -130px;
+    }
+ }
+ @media  screen and (max-width: 976px) {
+    #arrow {
+        margin-top: -150px;
+        margin-left: -120px;
+    }
+ }
